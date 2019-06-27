@@ -11,7 +11,7 @@ body{
   }
   .item-fade{
     vertical-align: top;
-    transition: opacity 0.15s cubic-bezier(.19,.71,.55,.99);
+    transition: opacity 0.3s cubic-bezier(.14,.9,.84,1);
     opacity: 1;
   }
   .item-fade:hover{
