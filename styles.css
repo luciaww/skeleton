@@ -1,28 +1,19 @@
-body {
-    color: orange;
-}
-.container {
-  position: relative;
-  width: 50%;
-  max-width: 500px;
+body{
+    background: black;
 }
 
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
+.contain{
 }
 
-.overlay {
-  position: absolute; 
-  bottom: 0; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
-  color: #f1f1f1; 
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
+.imgHolder{
+    display: inline-block;
+    background-image: url("a3.png");
+  }
+  .item-fade{
+    vertical-align: top;
+    transition: opacity 0.15s cubic-bezier(.19,.71,.55,.99);
+    opacity: 1;
+  }
+  .item-fade:hover{
+    opacity: 0;
+  }
