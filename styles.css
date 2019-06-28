@@ -1,6 +1,26 @@
+body{
+  font-family: rutledge-regular !important;
+}
 
 #pushbox {
-  margin-top: 300px;
+  margin-top: 150px;
+}
+
+/* --------------intro --------------  */
+
+#menu {
+  border-radius: 2px;
+  height: 44px;
+  width: 108px;
+  background-image: url("menu.png");
+}
+
+#fakelogo {
+  border-radius: 25px;
+  background: #004366;
+  width:300px;
+  height:30px;
+  margin-bottom: 40px;
 }
 
 /* --------------line 1---------------  */
@@ -8,37 +28,39 @@
 #button1 {
   border-radius: 25px;
   background: #d8dde6;
-  margin: 20px;
-  width: 200px;
+  width: 175px;
   height: 25px;
+  display: block;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 #underline_perm {
   border-radius: 25px;
   background:#0073d1;
-  margin: 0px 0px 20px 20px;
-  width: 200px;
+  width: 175px;
   height: 5px;
+  margin: auto;
 }
 
 #underline {
   border-radius: 25px;
   background: white;
-  margin: 0px 0px 20px 20px;
-  width: 200px;
+  width: 175px;
   height: 5px;
-  opacity: 0;
+  margin: auto;
   /*helpful*/
-  transition: opacity 3s cubic-bezier(.14,.9,.84,1);
-  -webkit-transition: opacity 3s cubic-bezier(.14,.9,.84,1);
+  transition: .5s cubic-bezier(.14,.9,.84,1);
+  -webkit-transition: .5s cubic-bezier(.14,.9,.84,1);
 }
 
 
 #button1:hover + #underline{
   background: #0073d1;
   opacity: 1;
-  transition: opacity 5s cubic-bezier(.14,.9,.84,1);
-  -webkit-transition: opacity 3s cubic-bezier(.14,.9,.84,1);
+  margin: auto;
+  transition: .5s cubic-bezier(.14,.9,.84,1);
+  -webkit-transition: .5s cubic-bezier(.14,.9,.84,1);
 
 }
 
