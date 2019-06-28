@@ -8,6 +8,10 @@ body{
   font-size: 20px !important;
 }
 
+a:hover{
+  
+}
+
 #pushbox {
   margin-top: 150px;
 }
@@ -29,7 +33,7 @@ body{
   border-radius: 25px;
   background: #004366;
   width:300px;
-  height:30px;
+  height:45px;
   margin-bottom: 80px;
 }
 
@@ -59,9 +63,9 @@ body{
   width: 175px;
   height: 5px;
   margin: auto;
+
   /*helpful*/
-  transition: .5s cubic-bezier(.14,.9,.84,1);
-  -webkit-transition: .5s cubic-bezier(.14,.9,.84,1);
+  transition: .2s cubic-bezier(.14,.9,.84,1);
 }
 
 
@@ -69,8 +73,6 @@ body{
   background: #0073d1;
   opacity: 1;
   margin: auto;
-  transition: .5s cubic-bezier(.14,.9,.84,1);
-  -webkit-transition: .5s cubic-bezier(.14,.9,.84,1);
 
 }
 
@@ -81,12 +83,24 @@ body{
   margin-top:30px;
   width: 150px;
   height: 50px;
+
+  
+}
+
+#button2:hover {
+  background: orange;
 }
 
 #button3 {
   border-radius: 10px;
   background: #0073d1;
+  margin: auto;
   margin-top:30px;
   width: 150px;
   height: 50px;
+  transition: .25s cubic-bezier(.14,.9,.84,1);
+}
+
+#button3:hover {
+  background: #0063B2;
 }
