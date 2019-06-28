@@ -1,9 +1,19 @@
+@font-face {
+  font-family: rutledge-reuglar;
+  src: url(rutledge-regular.woff);
+}
+
 body{
-  font-family: rutledge-regular !important;
+  font-family: rutledge-reuglar !important;
+  font-size: 20px !important;
 }
 
 #pushbox {
   margin-top: 150px;
+}
+
+#pushbox2 {
+  margin-bottom: 50px;
 }
 
 /* --------------intro --------------  */
@@ -20,7 +30,7 @@ body{
   background: #004366;
   width:300px;
   height:30px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 /* --------------line 1---------------  */
