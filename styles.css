@@ -8,10 +8,6 @@ body{
   font-size: 20px !important;
 }
 
-a:hover{
-  
-}
-
 #pushbox {
   margin-top: 150px;
 }
@@ -20,13 +16,26 @@ a:hover{
   margin-bottom: 50px;
 }
 
+a, a:link, a:visited {
+    color:black;
+}
+
+a:hover {
+    color: #0073d1;
+}
+
 /* --------------intro --------------  */
 
 #menu {
   border-radius: 2px;
-  height: 44px;
-  width: 108px;
+  height: 60px;
+  width: 118px;
   background-image: url("menu.png");
+  transition: .25s cubic-bezier(.14,.9,.84,1);
+}
+
+#menu:hover{
+    background-image: url("menu2.png");
 }
 
 #fakelogo {
