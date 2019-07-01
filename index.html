@@ -6,18 +6,34 @@
 </head>
 
 <body>
-
-    <div class="container" id="pushbox">
+    <!-- Sidebar -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+          
+        
+    <div class="container" id="main">
       
         <!------------------- header line ------------------->
         <div class="d-flex justify-content-between" id="pushbox2">
-                <div class="d-inline-flex p-2"><div id="menu"></div></div>
+                <div class="d-inline-flex p-2">
+                    <span onclick="openNav()" id="menu"></span>
+                </div>
+                
                 <div class="d-inline-flex p-2 align-self-center">
                     <a href="" id="link">&nbsp&nbspAction 1&nbsp&nbsp</a>
                     &nbsp|&nbsp
                     <a href="" id="link">&nbsp&nbspAction 2&nbsp&nbsp</a>
                 </div>
         </div>
+
+        
+
+        
 
         <!------------------- logo ------------------->
         <div class="row">
@@ -60,6 +76,19 @@
 
     </div>
 
+    <script>
+            /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+            function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+            }
+    
+            /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+            function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.body.style.backgroundColor = "white";
+            }
+        </script>
 </body>
 
 
