@@ -16,7 +16,7 @@
 }
 
 .professional{
-  
+
 }
 
 body{
@@ -57,6 +57,17 @@ a:hover {
   width:300px;
   height:45px;
   margin-bottom: 80px;
+}
+
+#menu {
+  height: 60px;
+  width: 118px;
+  background-image: url("menu.png");
+  transition: .25s cubic-bezier(.14,.9,.84,1);
+}
+
+#menu:hover{
+  background-image: url("menu2.png");
 }
 
 /* --------------menu components --------------  */
