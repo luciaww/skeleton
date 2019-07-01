@@ -8,8 +8,8 @@ body{
   font-size: 20px !important;
 }
 
-a:hover{
-  
+#link{
+  text-decoration: none;
 }
 
 #pushbox {
@@ -27,6 +27,10 @@ a:hover{
   height: 44px;
   width: 108px;
   background-image: url("menu.png");
+}
+
+#menu.hover{
+  background-image: url("menu2.png");
 }
 
 #fakelogo {
@@ -47,6 +51,7 @@ a:hover{
   display: block;
   margin: auto;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 #underline_perm {
@@ -89,6 +94,7 @@ a:hover{
 
 #button2:hover {
   background: orange;
+  cursor: pointer;
 }
 
 #button3 {
@@ -99,8 +105,10 @@ a:hover{
   width: 150px;
   height: 50px;
   transition: .25s cubic-bezier(.14,.9,.84,1);
+  cursor: pointer;
 }
 
 #button3:hover {
   background: #0063B2;
+  cursor: pointer;
 }
