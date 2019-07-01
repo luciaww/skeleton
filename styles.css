@@ -29,19 +29,6 @@ a:hover {
 }
 
 /* --------------intro --------------  */
-
-#menu {
-  height: 60px;
-  width: 118px;
-  background-image: url("menu.png");
-  transition: .25s cubic-bezier(.14,.9,.84,1);
-}
-
-#menu.hover{
-  background-image: url("menu2.png");
-  cursor: pointer;
-}
-
 #fakelogo {
   border-radius: 25px;
   background: #004366;
@@ -50,6 +37,70 @@ a:hover {
   margin-bottom: 80px;
 }
 
+/* --------------menu components --------------  */
+#menu {
+  height: 60px;
+  width: 118px;
+  background-image: url("menu.png");
+  transition: .25s cubic-bezier(.14,.9,.84,1);
+}
+
+#menu:hover{  
+  height: 60px;
+  width: 118px;
+  background-image: url("menu2.png");
+  cursor: pointer;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 /* --------------line 1---------------  */
 
 #button1 {
@@ -94,11 +145,12 @@ a:hover {
   background: #63738a;
   margin-top:30px;
   width: 150px;
-  height: 50px;  
+  height: 50px; 
+  transition: .25s cubic-bezier(.14,.9,.84,1); 
 }
 
 #button2:hover {
-  background: orange;
+  background: 	#9BA9BD;
   cursor: pointer;
 }
 
