@@ -1,0 +1,15 @@
+.modal-footer{
+    justify-content: center !important;
+}
+
+.no-border{
+  border:none !important;
+}
+
+modal-header{
+    height:10px;
+}
+
+.modal-open{
+    transition: 20s ease-in-out;
+}
