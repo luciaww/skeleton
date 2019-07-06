@@ -8,12 +8,16 @@
 
 @font-face {
   font-family: rutledge-reuglar;
-  src: url(rutledge-regular.woff);
+  src: url(fonts/rutledge-regular.woff);
 }
 
 body{
   font-family: rutledge-reuglar !important;
   font-size: 20px !important;
+}
+
+.contain{
+  position: relative;
 }
 
 #link{

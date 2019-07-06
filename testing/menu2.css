@@ -1,5 +1,4 @@
-/* --------------menu components --------------  */
-.openMenu, .closeMenu {
+.open, .close {
   height: 50px;
   width: 300px;
   font-size: 1.25rem;
@@ -17,7 +16,7 @@
   z-index: -1;
 }
 
-.menuContent {
+.menu {
   margin-left: -30%;
   width: 30%;
   height: 100%;
@@ -35,12 +34,12 @@
   transition: opacity 0.5s ease-in .25s;
 }
 
-.menuContent-show {
+.menu-show {
   margin-left: 0;
   transition: margin-left 0.5s ease-in 0.25s;
 }
 
-.menuContent-exit {
+.menu-exit {
   margin-left: -30%;
   transition: margin-left .5s ease-in;
 }

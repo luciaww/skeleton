@@ -1,15 +1,49 @@
-.modal-footer{
-    justify-content: center !important;
+.dialog{
+    opacity: 0;
+    position: absolute;
+    background: rgb(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-.no-border{
-  border:none !important;
+.dialogFadeIn {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+    z-index: auto;
 }
 
-modal-header{
-    height:10px;
+.dialogFadeOut {
+    opacity: 0;
+    transition: opacity .5s ease-out;
+    z-index: 3;
 }
 
-.modal-open{
-    transition: 20s ease-in-out;
+#dialogImg {
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+#closeChanges {
+    z-index: 4;
+    position: fixed;
+    top: 25%;
+    left: 75%;
+    color: white !important;
+    opacity: 1;
+    text-shadow: none;
+    /* bring your own prefixes */
+    transform: translate(-25%, -50%);
+    cursor: pointer !important;
+    height: 50px;
+    width: 50px;
+}
+
+#closeChanges:hover{
+    cursor: pointer !important;
 }

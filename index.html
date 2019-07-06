@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="modal.css">
 
-    <script src="scripts.js"></script>
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -18,23 +16,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <!-- Sidebar -->
-    <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-    </div>
-          
-        
+<body>  
     <div class="container" id="main">
       
         <!------------------- header line ------------------->
         <div class="d-flex justify-content-between" id="pushbox2">
                 <div class="d-inline-flex p-2">
-                    <span onclick="openNav()" id="menu"></span>
+                    <div class="openMenu" id="menu"></div>
                 </div>
                 
                 <div class="d-inline-flex p-2 align-self-center">
@@ -43,10 +31,6 @@
                     <a href="" id="link">&nbsp&nbspAction 2&nbsp&nbsp</a>
                 </div>
         </div>
-
-        
-
-        
 
         <!------------------- logo ------------------->
         <div class="row">
@@ -88,38 +72,35 @@
         </div>
 
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+        <!------------------- dialog button  ------------------->
+        <button type="button" id="openModal" class="btn btn-primary">
             Launch demo modal
         </button>
-      
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header no-border">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;&nbsp;</span>
-                </button>
-                </div>
-                <div class="modal-body">
-                    <div class="text-center d-block"><h2>kek</h2></div>
-                        here is some text oh boy
-                    </div>
-                <div class="modal-footer no-border">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Secondary CTA</button>
-                    <button type="button" class="btn btn-primary">Primary CTA</button>
-                </div>
-            </div>
-            </div>
-        </div>
 
+        
+    </div>
+ 
+    <!------------------- dialog window ------------------->
+    <div class="dialog contain">
+        <div class="close" id="closeChanges">X</div>
+        <img id="dialogImg" src="images/dialog.png">
     </div>
 
+    <!------------------- menu ------------------->
+    <section class="menu-wrapper">
+    <div class="menuContent">
+        <button class='closeMenu'>Close</button>
+        <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+        </ul>
+    </div>
+    </section>
 
     <div id="overlay"></div>
     
-    
+    <script src="scripts.js"></script>
 </body>
 
 

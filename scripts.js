@@ -1,15 +1,46 @@
- /* Set the width of the side navigation to 250px and the left margin 
- of the page content to 250px and add a black background color to body */
- function openNav() {
-  document.getElementById("mySidenav").style.width = "400px";
-  document.getElementById("overlay").style.opacity = "1";
-  document.getElementById("overlay").style.display = "block";
+/* menu scripts */
+function onClick() {
+  const wrapper = document.querySelector(".menu-wrapper");
+  const menu = document.querySelector(".menuContent");
+  wrapper.classList.add("menu-wrapper-enter");
+  menu.classList.add("menuContent-show");
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the
- page content to 0, and the background color of body to white */
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.body.style.backgroundColor = "white";
-  document.getElementById("overlay").style.display = "none";
+function onClose() {
+  const wrapper = document.querySelector(".menu-wrapper");
+  const menu = document.querySelector(".menuContent");
+  wrapper.classList.add("menu-wrapper-exit");
+  menu.classList.add("menuContent-exit");
+  
+  setTimeout(() => {
+    wrapper.classList.remove("menu-wrapper-enter");
+    wrapper.classList.remove("menu-wrapper-exit");
+    menu.classList.remove("menuContent-exit");
+  }, 500);
 }
+
+document.querySelector(".openMenu").addEventListener("click", onClick);
+
+document.querySelector(".closeMenu").addEventListener("click", onClose);
+
+
+/* modal scripts */
+setTimeout(()=>{
+  document.getElementById("openModal").addEventListener("click", function openModal() {
+    const dialog = document.querySelector('.dialog');
+    dialog.classList.add("dialogFadeIn");
+    dialog.classList.remove("dialogFadeOut");
+    console.log("open", dialog.classList);
+
+})
+
+  document.getElementsByClassName("close")[0].addEventListener("click", function() {
+    const dialog = document.querySelector('.dialog');
+    dialog.classList.remove("dialogFadeIn");
+    dialog.classList.add("dialogFadeOut");
+    console.log("close", dialog.classList);
+
+})
+
+}, 200)
+
