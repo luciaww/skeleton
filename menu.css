@@ -7,6 +7,7 @@
   margin-top: 5%;
   visibility: visible;
   font-weight: bold;
+  background: white;
 }
 
 .openMenu:hover, .closeMenu:hover {

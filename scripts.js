@@ -39,7 +39,7 @@ setTimeout(()=>{
     dialog.classList.remove("dialogFadeIn");
     dialog.classList.add("dialogFadeOut");
     console.log("close", dialog.classList);
-    setTimeout(dialogClosure, 530);
+    setTimeout(dialogClosure, 300);
 })
 }, 200)
 
