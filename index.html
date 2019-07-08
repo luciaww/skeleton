@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="dialog.css">
     <link rel="stylesheet" href="accordions.css">
+    <link rel="stylesheet" href="sideScroll.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -74,6 +75,31 @@
 
         <br><br>
 
+        <!------------------- side scroll ------------------->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/a3.png">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="images/a1.png">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="images/a2.png">
+                  </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+        </div>
+
+        <br><br>
+
         <!------------------- accordions ------------------->
         <div class="accordion" id="accordionExample">
             <div class="card">
@@ -93,9 +119,6 @@
               <div class="card-body">There are words inside of here!</div>
             </div>
         </div>
-        
-
-        
     </div>
  
     <!------------------- dialog window ------------------->

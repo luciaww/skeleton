@@ -1,4 +1,7 @@
 /* menu scripts */
+
+
+/* menu is opened */
 function onClick() {
   const wrapper = document.querySelector(".menu-wrapper");
   const menu = document.querySelector(".menuContent");
@@ -6,6 +9,7 @@ function onClick() {
   menu.classList.add("menuContent-show");
 }
 
+/* menu is closed */
 function onClose() {
   const wrapper = document.querySelector(".menu-wrapper");
   const menu = document.querySelector(".menuContent");

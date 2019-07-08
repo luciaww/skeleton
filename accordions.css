@@ -12,10 +12,19 @@
     border:none !important;
 }
 
-#headingTwo.card-header{
+.card-header{
+    border: none !important;
     background: white;
     font-size: 25px;
     font-weight: bold;
+}
+
+#headingTwo{
+    border-top: none !important;
+}
+
+.card{
+    border: none !important;
 }
 
 .card-body{
