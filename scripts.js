@@ -39,10 +39,13 @@ setTimeout(()=>{
     dialog.classList.remove("dialogFadeIn");
     dialog.classList.add("dialogFadeOut");
     console.log("close", dialog.classList);
-    $.delay(3000);
-    dialog.classList.remove("dialogFadeOut");
-    console.log("waited", dialog.classList);
+    setTimeout(dialogClosure, 530);
 })
-
 }, 200)
+
+function dialogClosure(){
+  const dialog = document.querySelector('.dialog');
+  dialog.classList.remove("dialogFadeOut");
+  console.log("waited", dialog.classList);
+}
 
