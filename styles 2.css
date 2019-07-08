@@ -105,17 +105,25 @@ a:hover {
 }
 
 /* --------------line 2---------------  */
-#button2 {
+.button2 {
   border-radius: 10px;
   background: #63738a;
+  margin: auto;
   margin-top:30px;
+  padding-top: 10px;
   width: 150px;
   height: 50px; 
   transition: .25s cubic-bezier(.14,.9,.84,1); 
+  color: white;
 }
 
-#button2:hover {
+.button2:active { 
+  outline:none;
+}
+
+.button2:hover {
   background: 	#9BA9BD;
+  cursor: pointer;
 }
 
 #button3 {
