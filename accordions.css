@@ -29,11 +29,16 @@
 
 .card-body{
     background: pink;
+    border: none;
 }
 
-.accordion #accordionExample #headingTwo{
+.accordion #accordionExample #headingTwo .collapse{
     border: none;
     background: white;
     
+}
+
+.card-header #headingTwo{
+    border: none;
 }
 
