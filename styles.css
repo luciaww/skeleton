@@ -59,12 +59,12 @@ a:hover {
 #menu {
   height: 60px;
   width: 118px;
-  background-image: url("images/menu.png");
+  background: white;
   transition: .25s cubic-bezier(.14,.9,.84,1);
 }
 
 #menu:hover{
-  background-image: url("images/menu2.png");
+  background: white;
   transition: .25s cubic-bezier(.14,.9,.84,1);
   cursor: pointer;
 }

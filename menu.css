@@ -7,7 +7,7 @@
   margin-top: 5%;
   visibility: visible;
   font-weight: bold;
-  background: white;
+  background:  #C5CBD8;;
 }
 
 .openMenu:hover, .closeMenu:hover {
@@ -43,15 +43,13 @@
   padding: 0;
   opacity: 0;
   z-index: -1;
-  border: 10px #C5CBD8;
 }
 
 .menuContent {
   margin-left: -400px;
   width: 400px;
   height: 100%;
-  background-color: white;
-  border: 10px #C5CBD8;
+  background-color:  #C5CBD8;
 }
 
 ul > li{
