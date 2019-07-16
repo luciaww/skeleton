@@ -1,119 +1,139 @@
-<html>
+<!DOCTYPE html>
+<html lang="en" >
 
 <head>
-        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8">
+    <title>css tabs with sliding underline</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
+  
     <style>
-        @use postcss-nested;
+        @font-face {
+            font-family: rutledge-regular;
+            src: url(../fonts/rutledge-regular.woff);
+        }
+
+        @font-face {
+            font-family: rutledge-regular;
+            src: url(../fonts/rutledge-bold.woff);
+            font-weight: bold;
+        }
 
         body {
-            background-color: #d9d9d9;
-            font-family: 'Roboto', sans-serif;
+            font-family: rutledge-regular;
         }
 
         .Panel {
             width: 100%;
             max-width: 600px;
             margin: 30px auto;
-            &__body {
-                background-color: #f2f2f2;
+        }
+
+        .Panel__body {
                 padding: 10px 20px;
             }
-        }
 
         .Tabs {
             position: relative;
             background-color: #fff;
-            &:after {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .Tabs:after {
                 content: ' ';
                 display: table;
                 clear: both;
             }
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            &__tab {
+
+        .Tabs__tab {
                 float: left;
                 width: 33.333%;
                 text-align: center;
-                &:first-child.active ~ .Tabs__presentation-slider {
+            }
+
+        .Tabs__tab:first-child.active ~ .Tabs__presentation-slider {
                     left: 0;
                 }
-                &:nth-child(2).active ~ .Tabs__presentation-slider {
+
+        .Tabs__tab:nth-child(2).active ~ .Tabs__presentation-slider {
                     left: 33.333%;
                 }
-                &:nth-child(3).active ~ .Tabs__presentation-slider {
+
+        .Tabs__tab:nth-child(3).active ~ .Tabs__presentation-slider {
                     left: calc(33.333% * 2);
                 }
-            }
-            &__presentation-slider {
+
+        .Tabs__presentation-slider {
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 33.333%;
+                width: 100px;
                 height: 2px;
                 background-color: #4A66F4;
                 transition: left .25s;
+                margin-left: 50px;
             }
-        }
 
         .Tab {
-            font-family: 'Roboto Slab';
-            > a {
+            font-family: rutledge-regular;
+        }
+
+        .Tab > a {
                 display: block;
                 padding: 10px 12px;
                 text-decoration: none;
                 color: #666;
                 transition: color .15s;
             }
-            &.active {
-                > a {
-                    color: #222;
+
+        .Tab.active > a {
+                    color: blue;
                 }
-            }
-            &:hover {
-                > a {
-                    color: #222;
+
+        .Tab:hover > a {
+                    color: blue;
                 }
-            }
-        }    
     </style>
+
+  
 </head>
 
-
 <body>
-    <div class="Panel">
-        <nav>
-            <ul class="Tabs">
-                <li class="Tabs__tab active Tab"><a href="#">Tab item</a></li>
-                <li class="Tabs__tab Tab"><a href="#">Mega</a></li>
-                <li class="Tabs__tab Tab"><a href="#">Pane name</a></li>
-                <li class="Tabs__presentation-slider" role="presentation"></li>
-            </ul>
-        </nav>
-        <div class="Panel__body">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis sint, facere aut, mollitia nihil tenetur sed vitae alias dolorum delectus.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, earum.</p>
-        </div>
-    </div>
-</body>
 
-<script>
-    var tabs = document.getElementsByClassName('Tab');
+  <div class="Panel">
+	<nav>
+		<ul class="Tabs">
+			<li class="Tabs__tab active Tab"><a href="#">tab 1</a></li>
+			<li class="Tabs__tab Tab"><a href="#">another tab</a></li>
+			<li class="Tabs__tab Tab"><a href="#">tab three</a></li>
+			<li class="Tabs__presentation-slider" role="presentation"></li>
+		</ul>
+	</nav>
+	<div class="Panel__body">
+		<p>there are things here</p>
+	</div>
+</div>
+  
+  
 
-    Array.prototype.forEach.call(tabs, function(tab) {
-        tab.addEventListener('click', setActiveClass);
-    });
+    <script>
+        var tabs = document.getElementsByClassName('Tab');
 
-    function setActiveClass(evt) {
         Array.prototype.forEach.call(tabs, function(tab) {
-            tab.classList.remove('active');
+            tab.addEventListener('click', setActiveClass);
         });
+
+        function setActiveClass(evt) {
+            Array.prototype.forEach.call(tabs, function(tab) {
+                tab.classList.remove('active');
+            });
         
         evt.currentTarget.classList.add('active');
-    }
-</script>
+        }
+    </script>
 
+</body>
 
 </html>
