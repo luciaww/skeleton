@@ -54,26 +54,21 @@ function dialogClosure(){
 }
 
 
-
-/* side scrolling */
-$('#recipeCarousel').carousel({
+$('#myCarousel').carousel({
   interval: 10000
 })
 
-$('.carousel .carousel-item').each(function(){
-    var next = $(this).next();
-    if (!next.length) {
+$('.carousel .item').each(function() {
+  var next = $(this).next();
+  if (!next.length) {
     next = $(this).siblings(':first');
-    }
-    next.children(':first-child').clone().appendTo($(this));
-    
-    for (var i=0;i<2;i++) {
-        next=next.next();
-        if (!next.length) {
-        	next = $(this).siblings(':first');
-      	}
-        
-        next.children(':first-child').clone().appendTo($(this));
-      }
+  }
+  next.children(':first-child').clone().appendTo($(this));
+
+  if (next.next().length > 0) {
+    next.next().children(':first-child').clone().appendTo($(this));
+  } else {
+    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+  }
 });
 

@@ -1,23 +1,21 @@
-function onClick() {
-  const wrapper = document.querySelector(".menu-wrapper");
-  const menu = document.querySelector(".menu");
-  wrapper.classList.add("menu-wrapper-enter");
-  menu.classList.add("menu-show");
-}
-
-function onClose() {
-  const wrapper = document.querySelector(".menu-wrapper");
-  const menu = document.querySelector(".menu");
-  wrapper.classList.add("menu-wrapper-exit");
-  menu.classList.add("menu-exit");
+(function(){
+  $('#carousel123').carousel({ interval: 2000 });
   
-  setTimeout(() => {
-    wrapper.classList.remove("menu-wrapper-enter");
-    wrapper.classList.remove("menu-wrapper-exit");
-    menu.classList.remove("menu-exit");
-  }, 500);
-}
+  $('.carousel-showsixmoveone .item').each(function(){
+    var itemToClone = $(this);
 
-document.querySelector(".open").addEventListener("click", onClick);
+    for (var i=1;i<6;i++) {
+      itemToClone = itemToClone.next();
 
-document.querySelector(".close").addEventListener("click", onClose);
+      // wrap around if at end of item collection
+      if (!itemToClone.length) {
+        itemToClone = $(this).siblings(':first');
+      }
+
+      // grab item, clone, add marker class, add to collection
+      itemToClone.children(':first-child').clone()
+        .addClass("cloneditem-"+(i))
+        .appendTo($(this));
+    }
+  });
+}());
